@@ -49,7 +49,7 @@ Repository prepared for public release.
 ### Repository
 - Added LICENSE (CC BY 4.0, specification text) and LICENSE-CODE (Apache-2.0, schemas and code).
 - Added CONTRIBUTING (with DCO sign-off), CODE_OF_CONDUCT (Contributor Covenant 2.1), SECURITY, GOVERNANCE, TRADEMARKS, TERMINOLOGY, THREAT-MODEL, RFC template, issue and pull request templates.
-- Added a "Draft, not for implementation. No certification program exists." banner to every document.
+- Added a "Draft, not for implementation. No certification program exists." banner to every specification document (drafts, README, terminology, threat model, schemas, registries and examples).
 
 ### All drafts
 - Renamed levels and certification levels to **conformance profiles**. Before v1.0, claims are self-assessments only; claim strings replaced by neutral self-assessment wording.
