@@ -45,7 +45,7 @@ A session's **effective tier** is the lowest tier of the runtime, of every commu
 - [schemas/](schemas/): JSON Schema 2020-12 files for the SI Envelope, capability token, module manifest, privacy report, refusal, and Provider Manifest, with a [map to the draft sections](schemas/README.md) and the [open questions](schemas/OPEN-QUESTIONS.md) that remain. The schemas follow the drafts; where they disagree, the draft wins.
 - [registries/](registries/README.md): minimal data-class, intent, and refusal-reason vocabularies, kept in sync with the schemas by the tests.
 - [examples/](examples/): valid and deliberately invalid examples for every schema, with the reason each invalid one fails.
-- [tools/validate/](tools/validate/): a small Python validator (JSON Schema plus semantic checks such as capability attenuation) and its tests. A GitHub Actions workflow is ready in [tools/validate/ci/](tools/validate/ci/) and runs them on every push and pull request once moved to `.github/workflows/`.
+- [tools/validate/](tools/validate/): a small Python validator (JSON Schema plus semantic checks such as capability attenuation) and its tests. A GitHub Actions workflow in [.github/workflows/validate.yml](.github/workflows/validate.yml) runs them on every push and pull request.
 - CBOR (non-normative): a CBOR encoding follows the same data model, encoded as deterministic CBOR (RFC 8949 section 4.2). A normative CBOR profile is future work.
 
 ```

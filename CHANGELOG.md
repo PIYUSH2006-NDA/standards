@@ -39,7 +39,7 @@ Roadmap step 1 (first part). No normative text changed.
 - `schemas/OPEN-QUESTIONS.md`: ambiguities and inconsistencies found in the drafts while writing the schemas, with the conservative choice each schema makes.
 - `examples/`: valid and deliberately invalid examples for every schema; `examples/README.md` explains why each invalid example fails.
 - `tools/validate/`: Python validator (JSON Schema plus semantic checks such as capability attenuation) and tests (Apache-2.0).
-- `tools/validate/ci/validate.yml`: GitHub Actions workflow that runs the validator and tests on every push and pull request; to be moved to `.github/workflows/` to activate it.
+- `.github/workflows/validate.yml`: GitHub Actions workflow that runs the validator and tests on every push and pull request.
 - README: "Schemas and Tooling" section, including a non-normative note that CBOR encoding follows the same data model as deterministic CBOR (RFC 8949 section 4.2).
 
 ## 2026-10-09: Pre-publication revision
