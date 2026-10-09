@@ -1,0 +1,50 @@
+# Changelog
+
+All notable changes to the SI Edge drafts. Dates are in Europe/Zurich time. All documents are **Draft, not for implementation**.
+
+## 2026-10-09: Pre-publication revision
+
+Repository prepared for public release.
+
+### Repository
+- Added LICENSE (CC BY 4.0, specification text) and LICENSE-CODE (Apache-2.0, schemas and code).
+- Added CONTRIBUTING (with DCO sign-off), CODE_OF_CONDUCT (Contributor Covenant 2.1), SECURITY, GOVERNANCE, TRADEMARKS, TERMINOLOGY, THREAT-MODEL, RFC template, issue and pull request templates.
+- Added a "Draft, not for implementation. No certification program exists." banner to every document.
+
+### All drafts
+- Renamed levels and certification levels to **conformance profiles**. Before v1.0, claims are self-assessments only; claim strings replaced by neutral self-assessment wording.
+- Added a **profile tag** ([R1], [C2], [P3], ...) to every normative rule so that rule text and profile tables match.
+- Replaced the RFC 2119 sentence with the full BCP 14 boilerplate (RFC 2119, RFC 8174).
+- Reworded data residency: tags are an owner policy choice, stricter than the default transfer rules of the nFADP and GDPR. Defined `CH`, `EU`, and `CH-EU`; unknown tags fail closed.
+- OAuth 2.1 now cited as an IETF Internet-Draft (work in progress), with RFC 9700 as the stable reference.
+- Added non-normative "Example connectors" lists to the runtime and provider drafts, with a neutrality note.
+- Added References sections and relative links between documents.
+
+### SI Edge Runtimes v0.3 (SIE-RT)
+- Defined Owner, User, Edge Device, Control Plane, Provider, full gateway mode, and residency tags.
+- Added rules: untrusted content and prompt injection (§2), sideloaded label and model weight hashes (§3), Trusted UI channel and accessibility-compatible consistency, voice approval step, WCAG 2.2 AA (§5), encrypted backup (§8), key recovery, owner key, mesh re-keying (§10), protected logs with deletable content (§11), relay fallback, metadata (§13), approval fatigue (§16), rollback restrictions (§17).
+- New §19 People, Shared Devices, and Vulnerable Users; new §20 Security and Privacy Considerations.
+- Moved remote retention duties to SIE-PRV; turned the "zero data" statement into a non-normative note; EU AI Act note now uses the Act's own roles.
+- Resolved conflicts: Core signing now R1, Privacy Gateway R1 with reports at R2, module packaging MUST with a small-Core SHOULD, outbound rule scoped to the Control Plane, every section now covered by a profile.
+
+### SI Edge-to-Edge Communication v0.1 (SIE-COM)
+- Companion reference corrected to runtime v0.3.
+- F5 discovery exempt from E2E encryption (no payload allowed); F7 media frames use AEAD after a signed setup instead of per-frame signatures.
+- Envelope: added `aud`, `session`, `seq`, `idem_key`, and a "Required" column.
+- Legacy endpoints defined as C0; shims are native endpoints that cannot claim R profiles; Method 4 renamed Proxy Method; human-instruction safety rule (§B6); pin reset rules (§B7).
+- Downgrade protection and cross-owner approvals now at C1; delegation chains across owners at C2; revocation bound defined.
+
+### SI Edge Ready Provider v0.1 (SIE-PRV)
+- "Certification Levels" renamed to Provider Conformance Profiles; certifiers and certificates replaced by independent audit for P2 and P3; P0 renamed "Unverified".
+- Scoped no-training and no-tracking rules to SI requests and anonymous mode; identified-mode linking must be declared.
+- Relay acceptance at P1, Oblivious HTTP gateway at P2.
+- Body rules aligned with the profile table.
+
+### History
+- runtime v0.1 and v0.2 marked Superseded; levels and claim strings withdrawn; v0.2 now uses model-neutral wording.
+
+## 2026-10-09: Initial drafts
+
+- SI Edge Devices v0.1 (first draft, remote attach).
+- SI Edge Runtimes v0.2 (runtime-as-interface reframing).
+- SI Edge Runtimes v0.3, SI Edge-to-Edge Communication v0.1, SI Edge Ready Provider v0.1.

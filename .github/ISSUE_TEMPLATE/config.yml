@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Report a security or privacy flaw privately
+    url: https://github.com/SI-Edge/standards/security/advisories/new
+    about: Please do not open public issues for security or privacy flaws in the specifications.
