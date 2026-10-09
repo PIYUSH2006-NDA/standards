@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to the Selfkin drafts. Dates are in Europe/Zurich time. All documents are **Draft, not for implementation**.
+## 2026-10-09: P1 anonymous privacy report example
+
+### Added
+
+- `examples/privacy-report.p1-anonymous.json`: valid example of an anonymous call to a P1 provider.
 
 ## 2026-10-09: Wording review
 
