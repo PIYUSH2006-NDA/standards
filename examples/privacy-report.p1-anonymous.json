@@ -1,47 +1,45 @@
 {
   "v": "0.1",
-  "id": "pr-2026-10-09-0920-07",
-  "call_at": "2026-10-09T09:20:11+02:00",
+  "id": "pr-2026-10-09-1105-02",
+  "call_at": "2026-10-09T11:05:42+02:00",
   "agent": "did:example:alice-phone#agent-assistant",
   "provider": {
-    "id": "https://models.example.net",
-    "name": "Example Models",
-    "manifest_version": "14"
+    "id": "https://search.example.com",
+    "name": "Example Search",
+    "manifest_version": "3"
   },
   "provider_profile": {
-    "claimed": "P2",
-    "effective": "P2",
+    "claimed": "P1",
+    "effective": "P1",
     "verified": true
   },
-  "effective_tier": 2,
+  "effective_tier": 1,
   "gateway_mode": "verified-provider",
   "relay": {
     "used": true,
-    "type": "ohttp",
+    "type": "masque",
     "id": "https://relay.example.net"
   },
   "network_identity": "relay",
   "account": {
     "mode": "anonymous",
-    "linkable": false,
-    "credential": "privacy-pass"
+    "linkable": false
   },
   "sent": {
     "data_classes": [
-      "documents.text"
+      "query.general"
     ],
     "fields": [
-      "prompt",
-      "document_excerpt"
+      "query"
     ],
-    "bytes": 4810
+    "bytes": 212
   },
   "redacted": {
     "data_classes": [
-      "contacts.email"
+      "contacts.name"
     ],
     "fields": [
-      "sender_email"
+      "person_name"
     ]
   },
   "minimisation": {
@@ -51,26 +49,20 @@
       "tracking-strip",
       "header-strip",
       "no-persistent-id",
-      "fresh-credential",
       "relay"
     ],
     "payload_digest": {
       "alg": "sha-256",
-      "value": "Lx2Kp0Wq8Ft7Ns1Bz4Vr6Uy3Hd9Jc5Ma0Ge2Ok8Ti4Q"
+      "value": "Q7mVt2Hc9Lp4Xw0Ra6Kd1Ns8Ej3Bf5Yu2Gi7Oz4Ta0M"
     }
   },
   "residency": {
     "tags": [
-      "CH-EU"
+      "EU"
     ],
-    "provider_region": "CH"
+    "provider_region": "DE"
   },
   "retention": {
-    "declared": "PT0S"
-  },
-  "model": {
-    "name": "example-large",
-    "version": "2026-08",
-    "region": "CH"
+    "declared": "PT24H"
   }
 }
